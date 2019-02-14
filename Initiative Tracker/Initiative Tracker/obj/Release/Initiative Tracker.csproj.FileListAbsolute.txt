@@ -1,0 +1,19 @@
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Release\Resources\battlestart.mp3
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Release\Initiative Tracker.exe.config
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Release\Initiative Tracker.exe.manifest
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Release\Initiative Tracker.application
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Release\Initiative Tracker.exe
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Release\Initiative Tracker.pdb
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\MainWindow.g.cs
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\App.g.cs
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker_Content.g.cs
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker_MarkupCompile.cache
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker_MarkupCompile.lref
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\MainWindow.baml
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker.g.resources
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative_Tracker.Properties.Resources.resources
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker.csproj.GenerateResource.Cache
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker.exe.manifest
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker.application
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker.exe
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Release\Initiative Tracker.pdb

@@ -1,0 +1,20 @@
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Debug\Initiative Tracker.exe.config
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Debug\Initiative Tracker.exe
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Debug\Initiative Tracker.pdb
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.csprojResolveAssemblyReference.cache
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\MainWindow.g.cs
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\App.g.cs
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker_MarkupCompile.cache
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker_MarkupCompile.lref
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\MainWindow.baml
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.g.resources
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative_Tracker.Properties.Resources.resources
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.csproj.GenerateResource.Cache
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.exe
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.pdb
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker_Content.g.cs
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Debug\Resources\battlestart.mp3
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Debug\Initiative Tracker.exe.manifest
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\bin\Debug\Initiative Tracker.application
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.exe.manifest
+c:\users\weis_\documents\visual studio 2017\Projects\Initiative Tracker\Initiative Tracker\obj\Debug\Initiative Tracker.application
