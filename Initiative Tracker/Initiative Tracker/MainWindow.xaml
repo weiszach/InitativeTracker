@@ -16,7 +16,7 @@
 
         <Label Content="Notifications" Height="30" Width="100" Margin="18,90,275.333,650.667" Grid.Column="1"/>
 
-        <DataGrid Name="dgTracker" Grid.Column="0" AutoGenerateColumns="False">
+        <DataGrid DataGridCell.GotFocus="DataGrid_CellGotFocus" Name="dgTracker" Grid.Column="0" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding name, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Name" IsReadOnly="False"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding initative, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Init" IsReadOnly="False"></DataGridTextColumn>
@@ -24,6 +24,7 @@
                 <DataGridTextColumn Binding="{Binding dmg, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"  Header="DMG" IsReadOnly="False"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <CheckBox Name="chkAudio" Content="Play Sounds" Grid.Column="1" Height="30" Width="100" IsChecked="True"></CheckBox>
         <Button Content="Save" ToolTip="Saves current session" Grid.Column="1"  Click="save_session" Margin="310,691,25.333,23.667" />
         <Button Content="Begin Combat" Name="btnStartNext" ToolTip="Move to next unit/round" Grid.Column="1" Margin="58,252,74.333,427.667" Click="next_unit"/>
         <Label Grid.Column="1" Content="" x:Name="lblNotifications" Height="50" Foreground="#FFFA0E0E" FontWeight="Bold" FontSize="24" Margin="18,125,33.333,595.667"/>

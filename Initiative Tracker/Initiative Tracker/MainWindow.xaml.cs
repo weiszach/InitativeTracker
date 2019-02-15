@@ -71,7 +71,44 @@ namespace Initiative_Tracker
             }
         }
 
-        private void DgTracker_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+
+        private void DataGrid_CellGotFocus(object sender, RoutedEventArgs e)
+        {
+            // Lookup for the source to be DataGridCell
+            if (e.OriginalSource.GetType() == typeof(DataGridCell))
+            {
+                // Starts the Edit on the row;
+                DataGrid grd = (DataGrid)sender;
+                grd.BeginEdit(e);
+
+                Control control = GetFirstChildByType<Control>(e.OriginalSource as DataGridCell);
+                if (control != null)
+                {
+                    control.Focus();
+                }
+            }
+        }
+
+        private T GetFirstChildByType<T>(DependencyObject prop) where T : DependencyObject
+        {
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(prop); i++)
+            {
+                DependencyObject child = VisualTreeHelper.GetChild((prop), i) as DependencyObject;
+                if (child == null)
+                    continue;
+
+                T castedProp = child as T;
+                if (castedProp != null)
+                    return castedProp;
+
+                castedProp = GetFirstChildByType<T>(child);
+
+                if (castedProp != null)
+                    return castedProp;
+            }
+            return null;
+        }
+            private void DgTracker_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             try
             { 
@@ -88,7 +125,10 @@ namespace Initiative_Tracker
                         if(selectedUnit.hp <= 0)
                         {
                             lblNotifications.Content = selectedUnit.name + " has died";
-                            synthesizer.SpeakAsync(selectedUnit.name + " has died");
+                            if ((bool)chkAudio.IsChecked)
+                            {
+                                synthesizer.SpeakAsync(selectedUnit.name + " has died");
+                            }
                             allUnits = (from c in allUnits orderby c.initative descending, c.name ascending select c).ToList();
                             //if we just got rid of the current unit we need to move
                             //on to the next unit to keep things moving along
@@ -102,14 +142,20 @@ namespace Initiative_Tracker
                                         if (i + 1 == allUnits.Count())
                                         {
                                             currentUnit = allUnits[0];
-                                            synthesizer.SpeakAsync(currentUnit.name + "s turn");
+                                            if ((bool)chkAudio.IsChecked)
+                                            {
+                                                synthesizer.SpeakAsync(currentUnit.name + "s turn");
+                                            }
                                             lblCurrentPlayer.Content = currentUnit.name;
                                             break;
                                         }
                                         else
                                         {
                                             currentUnit = allUnits[i + 1];
-                                            synthesizer.SpeakAsync(currentUnit.name + "s turn");
+                                            if ((bool)chkAudio.IsChecked)
+                                            {
+                                                synthesizer.SpeakAsync(currentUnit.name + "s turn");
+                                            }
                                             lblCurrentPlayer.Content = currentUnit.name;
                                             break;
                                         }
@@ -200,10 +246,13 @@ namespace Initiative_Tracker
             { 
                 if(btnStartNext.Content.ToString() == "Begin Combat")
                 {
-                    mediaPlayer.Open(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Resources\\battlestart.mp3"));                
-                    mediaPlayer.Play();
+                    if ((bool)chkAudio.IsChecked)
+                    {
+                        mediaPlayer.Open(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Resources\\battlestart.mp3"));
+                        mediaPlayer.Play();
 
-                    System.Threading.Thread.Sleep(4000);
+                        System.Threading.Thread.Sleep(4000);
+                    }
                 }
                 btnStartNext.Content = "Next Unit";
                 int i = 0;
@@ -239,7 +288,10 @@ namespace Initiative_Tracker
                     }
                 }
 
-                synthesizer.SpeakAsync(currentUnit.name + "s turn");
+                if ((bool)chkAudio.IsChecked)
+                {
+                    synthesizer.SpeakAsync(currentUnit.name + "s turn");
+                }
                 lblCurrentPlayer.Content = currentUnit.name;
             }
             catch (Exception ex)
