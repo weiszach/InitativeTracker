@@ -12,3 +12,5 @@ It will announce the player on their turn.
 Players/Monsters whos HP drops to zero are automatically removed
 
 When you add DMG it will subtract from their HP automatically
+
+NOTE: BEFORE YOU RESET COMBAT BE SURE TO SAVE, THIS WILL RESET THE UNITS BACK TO YOUR LAST SAVE POINT.
