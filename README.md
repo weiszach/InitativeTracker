@@ -14,6 +14,7 @@ Players/Monsters whos HP drops to zero are automatically removed
 When you add DMG it will subtract from their HP automatically
 
 V 0.2 2/16/2019
+
 Added saving/loading of sessions
 Moved disable sounds to the menu bar
 cleaned up the interface some
