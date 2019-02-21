@@ -15,13 +15,13 @@ When you add DMG it will subtract from their HP automatically
 
 TODO: Add a round timer that can be specified to it auto advances combat
 
-V 0.2 2/16/2019
+V 0.4 2/20/2019
 
-Added saving/loading of sessions 
+Added a more formal installer, please uninstall any previous versions before you install the new one.
 
-Moved disable sounds to the menu bar
+Added an init bonus column to help break ties.
 
-cleaned up the interface some
+Added a timer for DM's who want to force players to make quicker decisions.
 
 V 0.3 2/17/2019
 
@@ -30,3 +30,13 @@ Defaulted units HP to 1 if it's not specified
 Added a menu link to replace the battlestart.mp3 with anything you want (this is the file that's used when you click 'Announce Combat').  Just make sure it's named the same.
 
 Normalized the volume on the current battlestart.mp3 file so it's closer to the same volume that the player announcement is on.
+
+V 0.2 2/16/2019
+
+Added saving/loading of sessions 
+
+Moved disable sounds to the menu bar
+
+cleaned up the interface some
+
+
