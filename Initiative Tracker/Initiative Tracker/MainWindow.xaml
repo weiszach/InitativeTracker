@@ -5,29 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Initiative_Tracker"
         mc:Ignorable="d"
-        Title="Initiative Tracker" Background="LightGray" Height="800" Width="700">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Label Content="Current Player" Height="30" Width="100" Grid.Column="1" Margin="18,10,275.333,730.667"/>
-        <Label Grid.Column="1" Content="" Name="lblCurrentPlayer" Height="50" Foreground="#FFFA0E0E" FontWeight="Bold" FontSize="24" Margin="18,40,33.333,680.667"/>
+        Title="Initiative Tracker" Height="800" Width="700">
+    <Grid Background="Black" ShowGridLines="False">
+        <StackPanel VerticalAlignment="Top" Name="sp" Width="auto" Height="25">
+            <Menu Width="Auto" Height="20" DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="Load Previous Session" Name="mnLoadSession" Click="mnLoadSession_Click" />
+                    <MenuItem Header="Save Current Session" Name="mnSaveSession" Click="mnSaveSession_Click"/>
+                    <MenuItem Header="Manage Sessions" Name="mnManageSessions" Click="mnManageSessions_Click"/>
+                    <MenuItem Header="Replace Battle Start Sound" ToolTip="Place your new MP3 in this folder.  It MUST be named battlestart.mp3" Name="mnReplaceSound" Click="mnReplaceSound_Click"/>
+                    <CheckBox Content="Play Sounds" IsChecked="True" Name="chkAudio"></CheckBox>
+                    <MenuItem Header="Exit" Click="Exit__Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <StackPanel Height="775">
+            <Grid Name="grdMain" ShowGridLines="False" Background="#FF292828" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Current Player" Foreground="#CCC"  Height="30" Width="100" Grid.Column="1" Margin="18,10,275.333,730.667" />
+                <Label Grid.Column="1" Content="" Name="lblCurrentPlayer" Height="50" Foreground="#FFFA0E0E" FontWeight="Bold" FontSize="24" Margin="18,40,33.333,680.667"/>
+                <Label Grid.Column="1" Content="" Name="lblRound" Height="50" Foreground="#FF0E4EFA" FontWeight="Bold" FontSize="24" Margin="26,197,25.333,523.667"/>
+                <Label Content="Notifications" Foreground="#CCC" Height="30" Width="100" Margin="18,90,275.333,650.667" Grid.Column="1"/>
 
-        <Label Content="Notifications" Height="30" Width="100" Margin="18,90,275.333,650.667" Grid.Column="1"/>
-
-        <DataGrid DataGridCell.GotFocus="DataGrid_CellGotFocus" Name="dgTracker" Grid.Column="0" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding name, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Name" IsReadOnly="False"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding initative, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Init" IsReadOnly="False"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding hp, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="HP" IsReadOnly="False"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding dmg, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"  Header="DMG" IsReadOnly="False"></DataGridTextColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-        <CheckBox Name="chkAudio" Content="Play Sounds" Grid.Column="1" Height="30" Width="100" IsChecked="True"></CheckBox>
-        <Button Content="Save" ToolTip="Saves current session" Grid.Column="1"  Click="save_session" Margin="310,691,25.333,23.667" />
-        <Button Content="Begin Combat" Name="btnStartNext" ToolTip="Move to next unit/round" Grid.Column="1" Margin="58,252,74.333,427.667" Click="next_unit"/>
-        <Label Grid.Column="1" Content="" x:Name="lblNotifications" Height="50" Foreground="#FFFA0E0E" FontWeight="Bold" FontSize="24" Margin="18,125,33.333,595.667"/>
-        <Button Content="Reset Combat"  Name="btnStartNewCombat" ToolTip="Loads previous session to clear out everything" Grid.Column="1"  Click="btnStartNewCombat_Click" Margin="150,529,111.333,185.667" />
+                <DataGrid DataGridCell.GotFocus="DataGrid_CellGotFocus" PreviewKeyDown="dg_PreviewKeyDown" Background="#FF292828" Name="dgTracker" Grid.Column="0" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding name, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Name" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding initative, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Init" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding initBonus, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Bonus" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding hp, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="HP" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding dmg, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"  Header="DMG" IsReadOnly="False"></DataGridTextColumn>
+                        <DataGridCheckBoxColumn Binding="{Binding hidden, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Hidden" IsReadOnly="False"></DataGridCheckBoxColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Label Content="Duration (in seconds)" Grid.Column="1" Height="25" Width="150" Foreground="#FFFAF7F7" Margin="128,277,115.333,468.667"></Label>
+                <CheckBox Name="chkTimer" Content="Enable Timer" Click="chkTimer_Click" Height="25" Grid.Column="1" Width="100" Foreground="#FFFEFEFE" Margin="142,342,151.333,403.667"></CheckBox>
+                <ComboBox Grid.Column="1" Height="25" Name="cbTimerDuration" ToolTip="Duration between switching units automatically in seconds" RenderTransformOrigin="0.405,-2.456" Margin="161,322,174.333,450.333">
+                    <ComboBoxItem Selector.IsSelected="True">30</ComboBoxItem>
+                    <ComboBoxItem>60</ComboBoxItem>
+                    <ComboBoxItem>90</ComboBoxItem>
+                    <ComboBoxItem ToolTip="2 minutes">120</ComboBoxItem>
+                    <ComboBoxItem ToolTip="3 minutes">180</ComboBoxItem>
+                    <ComboBoxItem ToolTip="4 minutes">240</ComboBoxItem>
+                    <ComboBoxItem ToolTip="5 minutes">300</ComboBoxItem>
+                </ComboBox>
+                <Button Content="Pause" Name="btnPauseTimer" Click="btnPauseTimer_Click" Grid.Column="1" Height="25" Margin="85,322,246.333,450.333"/>
+                <Button Content="Begin Combat" Name="btnStartNext" ToolTip="Move to next unit/round" Grid.Column="1" Margin="62,395,70.333,284.667" Click="next_unit" BorderBrush="{x:Null}"/>
+                <Label Grid.Column="1" Content="" x:Name="lblNotifications" Height="50" Foreground="#FFFA0E0E" FontWeight="Bold" FontSize="24" Margin="18,125,33.333,595.667"/>
+                <Button Content="Announce Combat" x:Name="btnAnnounceCombat" ToolTip="Announce Combat" Grid.Column="1" Margin="108,636,123.333,73.667" Click="btnAnnounceCombat_Click" BorderBrush="{x:Null}"/>
+                <Label Content="" Name="lblDuration" Grid.Column="1" Height="50" Width="75" Foreground="#FFFC0D0D" Margin="246,305,72.333,442.333" FontSize="36"/>
+                <Button Content="Reset Rounds" x:Name="btnResetRounds" ToolTip="Reset Rounds" Grid.Column="1" Margin="128,557,145.333,207.333" Click="btnResetRounds_Click" BorderBrush="{x:Null}"/>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

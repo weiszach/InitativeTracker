@@ -1,6 +1,1 @@
-Broman,56,0
-Cabraken,52,0
-Ithrun,48,0
-Shan,35,0
-Sqwee,26,0
-Xanadu,33,0
+System.Collections.Generic.List`1[System.String]

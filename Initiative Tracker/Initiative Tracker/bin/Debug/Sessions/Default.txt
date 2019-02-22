@@ -1,0 +1,6 @@
+Broman,56,0,0,False
+Cabraken,52,0,0,False
+Ithrun,48,0,0,False
+Shan,35,0,0,False
+Sqwee,26,0,0,False
+Xanadu,33,0,0,False

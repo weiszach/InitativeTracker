@@ -12,5 +12,7 @@ namespace Initiative_Tracker
         public int initative { get; set; }
         public int hp { get; set; }
         public int dmg { get; set; }
+        public bool hidden { get; set; }
+        public int initBonus { get; set; }
     }
 }
