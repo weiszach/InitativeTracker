@@ -13,7 +13,13 @@ Players/Monsters whos HP drops to zero are automatically removed
 
 When you add DMG it will subtract from their HP automatically
 
-TODO: Add a round timer that can be specified to it auto advances combat
+V 0.5 2/21/2019
+
+Added quick row entry into grid, it will auto advance to the next row when you hit tab instead of having to click into the row.
+
+You can now reset the round.
+
+When a unit was removed on it's turn the timer wouldn't reset, it will now.
 
 V 0.4 2/20/2019
 
