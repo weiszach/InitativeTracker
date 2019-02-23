@@ -53,4 +53,6 @@ Moved disable sounds to the menu bar
 
 cleaned up the interface some
 
+V 0.1 2/15/2019
 
+Initial release
