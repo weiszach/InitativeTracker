@@ -229,11 +229,11 @@ namespace Initiative_Tracker
                         if((from c in allUnits where c.name == selectedUnit.name && c.initative == selectedUnit.initative select c).Count() == 0)
                         {
                             allUnits.Add(selectedUnit);
-                            allUnits = (from c in allUnits orderby c.initative descending, c.initBonus descending, c.name ascending select c).ToList();
+                            
                             dgTracker.CommitEdit();
                             dgTracker.CommitEdit();
 
-                            dgTracker.ItemsSource = allUnits;
+                            
                         }
 
                         if (!btnStartNext.IsEnabled)
@@ -243,6 +243,8 @@ namespace Initiative_Tracker
                             btnPauseTimer.IsEnabled = true;
                         }
 
+                        allUnits = (from c in allUnits orderby c.initative descending, c.initBonus descending, c.name ascending select c).ToList();
+                        dgTracker.ItemsSource = allUnits;
                     }
                 }
             }
