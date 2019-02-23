@@ -19,6 +19,8 @@ Added a checkbox to indicate if it's a monster or not and a button to roll initi
 
 Widened the window 100px.
 
+Minor bug fixes.
+
 V 0.5 2/21/2019
 
 Added quick row entry into grid, it will auto advance to the next row when you hit tab instead of having to click into the row.
