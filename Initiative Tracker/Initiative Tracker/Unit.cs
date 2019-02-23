@@ -14,5 +14,6 @@ namespace Initiative_Tracker
         public int dmg { get; set; }
         public bool hidden { get; set; }
         public int initBonus { get; set; }
+        public bool isMonster { get; set; }
     }
 }

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Initiative Tracker.exe" size="132576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Initiative Tracker.exe" size="133600">
       <assemblyIdentity name="Initiative Tracker" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>97MrdmJet0veFk4OgF5G1TrXRso7s+RUVgjKRpsrm9I=</dsig:DigestValue>
+        <dsig:DigestValue>wrxw2IBGoMA7rW/ejFj2SOH1HNm/7dXarC8if+WdHOw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

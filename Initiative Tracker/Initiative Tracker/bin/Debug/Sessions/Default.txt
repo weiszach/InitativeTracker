@@ -1,6 +1,8 @@
-Broman,56,0,0,False
-Cabraken,52,0,0,False
-Ithrun,48,0,0,False
-Shan,35,0,0,False
-Sqwee,26,0,0,False
-Xanadu,33,0,0,False
+Skeleton 1,1,11,0,False,True
+Skeleton 2,1,2,0,False,True
+Broman,1,0,0,False,False
+Cabraken,1,0,0,False,False
+Ithrun,1,0,0,False,False
+Shan,1,0,0,False,False
+Sqwee,1,0,0,False,False
+Xanadu,1,0,0,False,False

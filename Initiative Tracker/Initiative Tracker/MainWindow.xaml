@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Initiative_Tracker"
         mc:Ignorable="d"
-        Title="Initiative Tracker" Height="800" Width="700">
+        Title="Initiative Tracker" Height="800" Width="800">
     <Grid Background="Black" ShowGridLines="False">
         <StackPanel VerticalAlignment="Top" Name="sp" Width="auto" Height="25">
             <Menu Width="Auto" Height="20" DockPanel.Dock="Top">
@@ -22,7 +22,7 @@
         <StackPanel Height="775">
             <Grid Name="grdMain" ShowGridLines="False" Background="#FF292828" Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="400"></ColumnDefinition>
                     <ColumnDefinition ></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Content="Current Player" Foreground="#CCC"  Height="30" Width="100" Grid.Column="1" Margin="18,10,275.333,730.667" />
@@ -37,7 +37,8 @@
                         <DataGridTextColumn Binding="{Binding initBonus, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Bonus" IsReadOnly="False"></DataGridTextColumn>
                         <DataGridTextColumn Binding="{Binding hp, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="HP" IsReadOnly="False"></DataGridTextColumn>
                         <DataGridTextColumn Binding="{Binding dmg, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"  Header="DMG" IsReadOnly="False"></DataGridTextColumn>
-                        <DataGridCheckBoxColumn Binding="{Binding hidden, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Hidden" IsReadOnly="False"></DataGridCheckBoxColumn>
+                        <DataGridCheckBoxColumn  Binding="{Binding hidden, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Hidden" IsReadOnly="False"></DataGridCheckBoxColumn>
+                        <DataGridCheckBoxColumn Binding="{Binding isMonster, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Header="Monster" IsReadOnly="False"></DataGridCheckBoxColumn>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Label Content="Duration (in seconds)" Grid.Column="1" Height="25" Width="150" Foreground="#FFFAF7F7" Margin="128,277,115.333,468.667"></Label>
@@ -56,7 +57,8 @@
                 <Label Grid.Column="1" Content="" x:Name="lblNotifications" Height="50" Foreground="#FFFA0E0E" FontWeight="Bold" FontSize="24" Margin="18,125,33.333,595.667"/>
                 <Button Content="Announce Combat" x:Name="btnAnnounceCombat" ToolTip="Announce Combat" Grid.Column="1" Margin="108,636,123.333,73.667" Click="btnAnnounceCombat_Click" BorderBrush="{x:Null}"/>
                 <Label Content="" Name="lblDuration" Grid.Column="1" Height="50" Width="75" Foreground="#FFFC0D0D" Margin="246,305,72.333,442.333" FontSize="36"/>
-                <Button Content="Reset Rounds" x:Name="btnResetRounds" ToolTip="Reset Rounds" Grid.Column="1" Margin="128,557,145.333,207.333" Click="btnResetRounds_Click" BorderBrush="{x:Null}"/>
+                <Button Content="Reset Rounds" x:Name="btnResetRounds" ToolTip="Reset Rounds" Grid.Column="1" Margin="128,534,145.333,230.333" Click="btnResetRounds_Click" BorderBrush="{x:Null}"/>
+                <Button Content="Roll for Monsters" x:Name="btnRollMonsters" ToolTip="Roll for Monsters" Grid.Column="1" Margin="128,587,145.333,177.333" Click="btnRollMonsters_Click" BorderBrush="{x:Null}"/>
             </Grid>
         </StackPanel>
     </Grid>

@@ -392,6 +392,24 @@ namespace Initiative_Tracker
             }
         }
 
+        private void btnRollMonsters_Click(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            
+            foreach (Unit u in allUnits)
+            {
+                if(u.isMonster)
+                {
+                    int init = rnd.Next(1, 21);
+                    u.initative = init;
+                }
+            }
+
+            allUnits = (from c in allUnits orderby c.initative descending, c.initBonus descending, c.name ascending select c).ToList();
+
+            dgTracker.ItemsSource = allUnits;
+        }
+
         #endregion
 
         #region menu items
@@ -424,7 +442,8 @@ namespace Initiative_Tracker
                             hp = int.Parse(currentUnits[1]),
                             initative = int.Parse(currentUnits[2]),
                             dmg = int.Parse(currentUnits[3]),
-                            hidden = bool.Parse(currentUnits[4])
+                            hidden = bool.Parse(currentUnits[4]),
+                            isMonster = (currentUnits.Count == 6) ? bool.Parse(currentUnits[5]) : false
                         });
                     }
 
@@ -468,7 +487,7 @@ namespace Initiative_Tracker
 
                 foreach (Unit u in allUnits)
                 {
-                    sb.Append(u.name + "," + u.hp + "," + u.initative + "," + u.dmg + "," + u.hidden + Environment.NewLine);
+                    sb.Append(u.name + "," + u.hp + "," + u.initative + "," + u.dmg + "," + u.hidden + "," + u.isMonster + Environment.NewLine);
                 }
 
                 if (sfd.FileName != "")
