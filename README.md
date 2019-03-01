@@ -13,6 +13,10 @@ Players/Monsters whos HP drops to zero are automatically removed
 
 When you add DMG it will subtract from their HP automatically
 
+V 0.7 2/28/2019
+
+Fix when updating units HP it was defaulting to zero regardless of the value entered.
+
 V 0.6 2/23/2019
 
 Added a checkbox to indicate if it's a monster or not and a button to roll initiatives for all monsters. 
