@@ -13,6 +13,12 @@ Players/Monsters whos HP drops to zero are automatically removed
 
 When you add DMG it will subtract from their HP automatically
 
+V 0.8 3/3/2019
+
+Added fanfare music after all monsters are defeated.
+
+Bug fixes.
+
 V 0.7 2/28/2019
 
 Fix when updating units HP it was defaulting to zero regardless of the value entered.
