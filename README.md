@@ -13,6 +13,12 @@ Players/Monsters whos HP drops to zero are automatically removed
 
 When you add DMG it will subtract from their HP automatically
 
+V 0.9 3/7/2019
+
+Increased the height slightly.  
+
+Added a notes section.
+
 V 0.8 3/3/2019
 
 Added fanfare music after all monsters are defeated.
